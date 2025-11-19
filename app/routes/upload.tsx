@@ -23,7 +23,6 @@ const upload = () => {
         setIsProcessing(true);
         setStatusText('Uploading the file...');
         const uploadedFile = await fs.upload([false]);
-
         if(!uploadedFile) return setStatusText('Error Failed to Upload file');
         setStatusText('converting ro image...');
         const imageFile = await convertPdfToImage(false);
@@ -53,7 +52,8 @@ const upload = () => {
 
         data.feedback = JSON.parse(feedbackText);
         await kv.set(`resume : ${uuid}`, JSON.stringify(data));
-        setStatusText('Analyzes complete , redirecting')
+        setStatusText('Analyzes complete , redirecting');
+        navigate(`/resume/${uuid}`);
     }
 
    const handleSubmit = (e:FormEvent<HTMLFormElement>)=>{

@@ -2,7 +2,7 @@ import { usePuterStore } from 'lib/puter'
 import React, { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router';
 export const meta = ()=>([
-    {title:"Resmunid | Auth"},
+    {title:"Resumnizer | Auth"},
     {name: 'description' , content:'Log into your account'}
 ])
 const Auth = () => {

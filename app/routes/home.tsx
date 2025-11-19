@@ -20,7 +20,6 @@ export default function Home() {
     useEffect(()=>{
         if(!auth.isAuthenticated) navigate("/auth?next=/");
          },[auth.isAuthenticated])
-         
   return <main className="bd-[url('/images/bg-main.svg')] bg-cover">
     <Navbar/>
     <section className="main-section">
